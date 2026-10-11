@@ -38,8 +38,8 @@ Chest X-ray Dataset → Image Loading → Preprocessing (Resize, Normalize, Augm
 
 ## ⚙️ INSTALLATION & SETUP
 
-git clone https://github.com/maheshbhakre/ai-medical-image-analysis.git  
-cd ai-medical-image-analysis  
+git clone https://github.com/maheshbhakre/-AI-Powered-Medical-Image-Analysis.git  
+cd -AI-Powered-Medical-Image-Analysis  
 
 python -m venv venv  
 
@@ -55,6 +55,18 @@ pip install -r requirements.txt
 python src/train.py  
 python src/predict.py  
 python src/evaluate.py  
+
+### Dashboard
+
+After training, start the Streamlit dashboard:
+
+```bash
+python -m streamlit run dashboard.py
+```
+
+Open `http://localhost:8501`. The dashboard uses the saved model at
+`models/medical_model.h5`, preserves the training preprocessing (224x224 RGB input
+scaled to 0-1), and reports model predictions as educational screening output only.
 
 ---
 
@@ -135,19 +147,23 @@ AI-MEDICAL-IMAGE-ANALYSIS/
 ## 📸 OUTPUT SCREENSHOTS
 
 <p align="center">
-<img src="images/sample_xray.png" width="650"/>
+<img src="images/x-ray_prediction.png" width="700"/>
 </p>
 
 <p align="center">
-<img src="images/training.png" width="650"/>
+<img src="images/model_prediction.png" width="700"/>
 </p>
 
 <p align="center">
-<img src="images/predicted.png" width="650"/>
+<img src="images/overview.png" width="700"/>
 </p>
 
 <p align="center">
-<img src="images/confusion_matrix.png" width="650"/>
+<img src="images/evaluation.png" width="700"/>
+</p>
+
+<p align="center">
+<img src="images/graph.png" width="700"/>
 </p>
 
 ---

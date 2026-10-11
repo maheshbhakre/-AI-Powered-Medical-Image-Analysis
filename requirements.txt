@@ -3,3 +3,5 @@ opencv-python
 matplotlib
 numpy
 scikit-learn
+streamlit
+seaborn
